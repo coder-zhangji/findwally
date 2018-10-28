@@ -6,7 +6,7 @@ import sys
 imgPath = sys.argv[1]
 im = Image.open(imgPath)
 width, hight = im.size
-newPath = "/home/wzq/PycharmProjects/HereIsWally-master/inputSubImg/"
+newPath = "PATH TO A NEW FOLDER TO SAVE SUB-IMAGES"
 
 
 w = 350
