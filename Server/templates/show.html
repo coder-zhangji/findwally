@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flask Show Image</title>
+    <link rel="stylesheet" type="text/css" href="">
+
+    <style type="text/css">
+    body{
+        padding: 10px;
+        width: 1000px;
+        font: 75%/120% Arial, Helvetica, sans-serif;
+        text-align:center;
+    }
+    div {
+    width: 800px;
+    height: 600px;
+    border: 1px solid #000;
+    padding: 20px;
+    margin-left: auto;
+    margin-right:auto;
+    }
+    img {
+    width: 100%;
+    height: 100%;
+    }
+
+    </style>
+
+</head>
+<body>
+    <br>
+    <strong><h1 align="center"><font size="8">Result</font></h1></strong>
+
+    <hr>
+    <br>
+    <br>
+    <div>
+    <img src="{{ url_for('static', filename= aname)}}"/>
+    </div>
+</body>
+</html>

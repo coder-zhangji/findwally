@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>图片上传</title>
+
+  <link rel="stylesheet" type="text/css" href="static/common.css">
+
+  <script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+    <style>
+    body { background-color: #FFFFCC; }
+  </style>
+</head>
+<body>
+
+
+
+<br>
+<br>
+<h1><font size="10"><strong>Find Wally</strong></font></h1>
+
+<h1 align="center">Ji Zhang && Zhuoqun Wang</h1>
+
+<br>
+<hr>
+<br>
+
+<img src="{{ url_for('static', filename='indexx.jpg')}}" border="2"/></p>
+
+<pr>
+<pr>
+
+
+<form name="form" method="post" action="http://localhost:5000/up_photo" enctype="multipart/form-data">
+
+            <input type="file" name="photo" id="picpath"style="display: none;"
+                onchange="document.form.path.value=this.value" multiple="multiple" accept="image/*" />
+            <input name="path" readonly style="width:150px;height:25px"/>
+            <input type="button" value="upload img" onclick="document.form.picpath.click()" style="width:80px;height:30px"/>
+            <input type="submit" value="submit" style="width:80px;height:30px">
+</form>
+
+<br>
+<br>
+<hr>
+
+    <strong><p align="left"><font size="5">Where’s Waldo (or Wally) is a series of children’s books that challenges the reader with finding the eponymous character and his compadres in densely illustrated images.</font></p></strong>
+    <strong><p align="left"><font size="5">The web application can help users upload their images containing wally. Once you upload successfully, system will label wally in the images using a box along with the prediction's accuracy. The whole process may take 30-40 seconds.</font></p></strong>
+        <br>
+    <br>
+    <p align="left"><font size="6" font color="red">READY? TRY TO USE IT AND BEGIN YOUR EXPLORATION!</font></p>
+    <hr>
+
+</body>
+</html>
