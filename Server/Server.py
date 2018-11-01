@@ -49,12 +49,7 @@ def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1] in ALLOWED_EXTENSIONS
 
 def return_img_stream(img_local_path):
-    """
-    工具函数:
-    获取本地图片流
-    :param img_local_path:文件单张图片的本地绝对路径
-    :return: 图片流
-    """
+
     import base64
     img_stream = ''
     with open(img_local_path, 'rb') as img_f:
@@ -72,7 +67,7 @@ def index():
 def upload_test():
     return render_template('show.html')
 
-# 上传文件
+# upload file and store the file in the local server, and return the result image
 @app.route('/up_photo', methods=['POST'], strict_slashes=False)
 def api_upload():
     file_dir = os.path.join(basedir, app.config['UPLOAD_FOLDER'])
